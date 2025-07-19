@@ -1,17 +1,23 @@
 import React from 'react'
-import join from './utils'
-// import About from './components/about'
+import Navigation from './components/navigation'
+import Home from './routes/home'
+import Gallery from './routes/gallery'
+import About from './routes/about'
 
 const App: React.FC = () => {
   const [route, setRoute] = React.useState('home')
 
   return (
-    <div className='relative min-h-screen w-full overflow-hidden'>
-      <div className='relative z-0 text-center pb-24 bg-background min-h-screen'>
-        <div>
-          {route === 'home' && <></>}
-          {route === 'gallery' && <></>}
-          {route === 'about' && <></>}
+    <div
+      className='min-h-screen w-full overflow-hidden 
+    bg-gradient-to-b from-background to-[#fbfbf9]'
+    >
+      <Navigation setRoute={setRoute} />
+      <div className='h-[calc(100vh-4rem)] overflow-hidden'>
+        <div className='h-[calc(100vh-4rem)] overflow-hidden'>
+          {route === 'home' && <Home />}
+          {route === 'gallery' && <Gallery />}
+          {route === 'about' && <About />}
         </div>
       </div>
     </div>
