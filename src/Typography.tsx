@@ -1,6 +1,15 @@
 import React, { ElementType, ReactNode } from 'react'
 
-type Variant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'body' | 'body-small' | 'small'
+type Variant =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'body'
+  | 'body-small'
+  | 'small'
+  | 'logo'
 
 interface Props {
   variant: Variant
@@ -18,9 +27,11 @@ const tags: Record<Variant, ElementType> = {
   'body': 'p',
   'body-small': 'p',
   'small': 'span',
+  'logo': 'span',
 }
 
 const sizes: Record<Variant, string> = {
+  'logo': 'lg-7xl text-6xl',
   'h1': 'xl:text-6xl lg:text-5xl md:text-4xl text-3xl',
   'h2': 'xl:text-5xl lg:text-4xl md:text-3xl text-2xl',
   'h3': 'xl:text-4xl lg:text-3xl md:text-2xl text-xl',
