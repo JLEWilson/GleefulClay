@@ -1,34 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import COLLECTIONS from '../consts/photoGroups'
+import ImageCarousel from '../components/imageCarousel'
 
 const Gallery = () => {
+  const [activeCollection, setActiveCollection] = useState<string | null>(null)
+
   return (
-    <div className='px-4'>
-      {Object.entries(COLLECTIONS).map(
-        ([collection, images]: [string, string[]]) => (
-          <section
-            key={collection}
-            className='mb-12'
+    <div
+      className='flex flex-col items-center justify-center pt-8 
+        h-screen px-4 text-center'
+    >
+      {Object.keys(COLLECTIONS).map((collection) => (
+        <section
+          key={collection}
+          className='mb-12 w-full max-w-6xl text-center'
+        >
+          <button
+            type='button'
+            onClick={() => setActiveCollection(collection)}
+            className='text-2xl font-semibold capitalize mb-4 block 
+              hover:underline hover:text-secondary mx-auto'
           >
-            <h2 className='text-2xl font-semibold capitalize mb-4'>
-              {collection}
-            </h2>
-            <div
-              className='grid grid-cols-2 sm:grid-cols-3 
-            md:grid-cols-4 gap-4 auto-rows-[200px]'
-            >
-              {images.map((src: string) => (
-                <img
-                  key={`${collection}-${src}`}
-                  loading='lazy'
-                  src={src}
-                  alt={`${collection}-${src}`}
-                  className='w-full h-full object-cover rounded'
-                />
-              ))}
-            </div>
-          </section>
-        ),
+            {collection}
+          </button>
+        </section>
+      ))}
+
+      {activeCollection && (
+        <ImageCarousel
+          images={COLLECTIONS[activeCollection]}
+          title={activeCollection}
+          onClose={() => setActiveCollection(null)}
+        />
       )}
     </div>
   )
