@@ -52,17 +52,18 @@ module.exports = {
         },
       },
       colors: {
-        background: '#001C30',
+        background: '#C4E8f8',
         primary: '#176B87',
         secondary: '#64CCC5',
-        text: '#DAFFFB',
+        text: '#dd5810',
       },
       skew: {
         140: '140deg',
       },
       fontFamily: {
-        Roboto: ['Roboto', 'serif'],
-        Changa: ['Changa', 'sans-serif'],
+        CormorantGaramond: ['"Cormorant Garamond"', 'serif'],
+        PlayfairDisplay: ['"Playfair Display"', 'serif'],
+        PlaypenSans: ['"Playpen Sans"', 'sans-serif'],
       },
       lineHeight: {
         'extra-loose': '2.5',
