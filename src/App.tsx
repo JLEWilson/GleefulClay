@@ -9,17 +9,15 @@ const App: React.FC = () => {
 
   return (
     <div
-      className='min-h-screen w-full overflow-hidden 
-    bg-gradient-to-b from-background to-[#fbfbf9]'
+      className='min-h-screen w-full 
+    bg-gradient-to-b from-background to-[#fbfbf9] overflow-auto'
     >
       <Navigation setRoute={setRoute} />
-      <div className='h-[calc(100vh-4rem)] overflow-hidden'>
-        <div className='h-[calc(100vh-4rem)] overflow-hidden'>
-          {route === 'home' && <Home />}
-          {route === 'gallery' && <Gallery />}
-          {route === 'about' && <About />}
-        </div>
-      </div>
+      <main className='px-4 pb-12'>
+        {route === 'home' && <Home />}
+        {route === 'gallery' && <Gallery />}
+        {route === 'about' && <About />}
+      </main>
     </div>
   )
 }
