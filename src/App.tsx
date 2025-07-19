@@ -8,12 +8,9 @@ const App: React.FC = () => {
   const [route, setRoute] = React.useState('home')
 
   return (
-    <div
-      className='min-h-screen w-full 
-    bg-gradient-to-b from-background to-[#fbfbf9] overflow-auto'
-    >
+    <div className='flex flex-col min-h-screen overflow-hidden'>
       <Navigation setRoute={setRoute} />
-      <main className='px-4 pb-12'>
+      <main className='flex-grow '>
         {route === 'home' && <Home />}
         {route === 'gallery' && <Gallery />}
         {route === 'about' && <About />}
