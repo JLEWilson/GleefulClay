@@ -6,25 +6,33 @@ import Typography from '../Typography'
 const Home = () => {
   return (
     <div
-      className='flex flex-col items-center
-     justify-center h-[calc(100vh-4rem)] px-4 text-center overflow-hidden'
+      className='flex flex-col items-center justify-center pt-8
+    h-screen px-4 text-center'
     >
-      <img
-        src={BowlAndStars}
-        alt='Bowl and Stars'
-        className='w-auto object-contain max-h-[calc(100vh-14rem)]'
-      />
+      <div
+        className='flex-shrink-0 max-h-[60vh] w-full 
+      flex justify-center items-center'
+      >
+        <img
+          src={BowlAndStars}
+          alt='Bowl and Stars'
+          className='object-contain max-h-full max-w-[80%]'
+        />
+      </div>
 
-      <div className='mt-4 flex flex-col items-center'>
+      <div
+        className='mt-4 flex flex-col items-center 
+      flex-shrink-0 max-h-[30vh] justify-center'
+      >
         <Typography
           variant='logo'
-          className='font-PlaypenSans text-text'
+          className='font-PlaypenSans text-text leading-tight text-3xl'
         >
           Gleeful
         </Typography>
         <Typography
           variant='logo'
-          className='font-PlaypenSans text-text'
+          className='font-PlaypenSans text-text leading-tight text-3xl'
         >
           Clay
         </Typography>
