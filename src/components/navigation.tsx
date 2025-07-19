@@ -14,7 +14,7 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ setRoute }) => {
   return (
-    <div className='h-16'>
+    <div className='h-16 absolute top-0 left-0 w-full '>
       <nav
         className={join(
           `flex justify-evenly items-center h-full
@@ -26,12 +26,14 @@ const Navigation: React.FC<NavigationProps> = ({ setRoute }) => {
             key={`Button: ${r.name}`}
             type='button'
             onClick={() => setRoute(r.route)}
-            className='hover:underline hover:text-secondary'
+            className='hover:text-secondary transform transition duration-100 
+            ease-in-out hover:scale-110'
           >
             <Typography
               key={`Text: ${r.name}`}
-              className='text-text font-bold hover:text-secondary'
-              variant='h4'
+              className='text-text font-PlayfairDisplay 
+              font-bold hover:text-secondary'
+              variant='h3'
             >
               {r.name}
             </Typography>
