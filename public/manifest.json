@@ -1,15 +1,15 @@
 {
-  "short_name": "Template",
-  "name": "Template",
+  "short_name": "GleefulClay",
+  "name": "Gleeful Clay",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "favicon.png",
+      "sizes": "512x512",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
+      "src": "logo192.svg",
+      "type": "image/svg",
       "sizes": "192x192"
     },
     {
