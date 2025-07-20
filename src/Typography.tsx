@@ -31,7 +31,7 @@ const tags: Record<Variant, ElementType> = {
 }
 
 const sizes: Record<Variant, string> = {
-  'logo': 'lg-7xl text-6xl',
+  'logo': 'lg-7xl md:text-6xl text-5xl',
   'h1': 'xl:text-6xl lg:text-5xl md:text-4xl text-3xl',
   'h2': 'xl:text-5xl lg:text-4xl md:text-3xl text-2xl',
   'h3': 'xl:text-4xl lg:text-3xl md:text-2xl text-xl',

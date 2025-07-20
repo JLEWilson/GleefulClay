@@ -1,6 +1,5 @@
 import React from 'react'
 import Typography from '../Typography'
-import join from '../utils'
 
 const routes = [
   { name: 'Home', route: 'home' },
@@ -14,33 +13,29 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ setRoute }) => {
   return (
-    <div className='h-16 absolute top-0 left-0 w-full '>
-      <nav
-        className={join(
-          `flex justify-evenly items-center h-full
-       p-4 text-white`,
-        )}
-      >
-        {routes.map((r) => (
-          <button
-            key={`Button: ${r.name}`}
-            type='button'
-            onClick={() => setRoute(r.route)}
-            className='hover:text-secondary transform transition duration-100 
-            ease-in-out hover:scale-110'
-          >
-            <Typography
-              key={`Text: ${r.name}`}
-              className='text-text font-PlayfairDisplay 
+    <nav
+      className='w-full h-16 z-50 bg-[#fbfbf9] md:bg-transparent
+    fixed md:top-0 bottom-0 flex justify-evenly items-center p-4'
+    >
+      {routes.map((r) => (
+        <button
+          key={`Button: ${r.name}`}
+          type='button'
+          onClick={() => setRoute(r.route)}
+          className='hover:text-secondary transform transition duration-100 
+           ease-in-out hover:scale-110'
+        >
+          <Typography
+            key={`Text: ${r.name}`}
+            className='text-text font-PlayfairDisplay 
               font-bold hover:text-secondary'
-              variant='h3'
-            >
-              {r.name}
-            </Typography>
-          </button>
-        ))}
-      </nav>
-    </div>
+            variant='h2'
+          >
+            {r.name}
+          </Typography>
+        </button>
+      ))}
+    </nav>
   )
 }
 

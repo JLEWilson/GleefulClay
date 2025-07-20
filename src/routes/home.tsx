@@ -1,17 +1,17 @@
 import React from 'react'
 
-import BowlAndStars from '../images/Logo/BowlAndStars.png'
+import BowlAndStars from '../images/BowlAndStars.webp'
 import Typography from '../Typography'
 
 const Home = () => {
   return (
     <div
-      className='flex flex-col items-center justify-center pt-8
+      className='flex flex-col items-center justify-center
     h-screen px-4 text-center'
     >
       <div
-        className='flex-shrink-0 max-h-[60vh] w-full 
-      flex justify-center items-center'
+        className='flex-shrink-0 max-h-[65vh] w-full 
+      flex justify-center items-center pt-16'
       >
         <img
           src={BowlAndStars}
