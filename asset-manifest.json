@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/www.gleefulclay.com/static/css/main.3596bf2a.css",
+    "main.js": "/www.gleefulclay.com/static/js/main.42bfff7c.js",
+    "static/js/787.af272199.chunk.js": "/www.gleefulclay.com/static/js/787.af272199.chunk.js",
+    "static/media/CCWallFish.webp": "/www.gleefulclay.com/static/media/CCWallFish.768398d6139fc8f3e260.webp",
+    "static/media/CCWallSnail.webp": "/www.gleefulclay.com/static/media/CCWallSnail.3feed635e6f2592a847f.webp",
+    "static/media/CCWall.webp": "/www.gleefulclay.com/static/media/CCWall.445ff999cd611f400eab.webp",
+    "static/media/CCSharkTile.webp": "/www.gleefulclay.com/static/media/CCSharkTile.5348cc572814dbc8cf4c.webp",
+    "static/media/BWCirclePot.webp": "/www.gleefulclay.com/static/media/BWCirclePot.817c7c06deab24e4f9f0.webp",
+    "static/media/FSDragon.webp": "/www.gleefulclay.com/static/media/FSDragon.d19884bffe37feeaee45.webp",
+    "static/media/BWCheckBowl.webp": "/www.gleefulclay.com/static/media/BWCheckBowl.302f84c0ab0f9538e040.webp",
+    "static/media/CCOctopusBowlBottom.webp": "/www.gleefulclay.com/static/media/CCOctopusBowlBottom.e6d55913bdabb869f3c3.webp",
+    "static/media/FSHouseDoor.webp": "/www.gleefulclay.com/static/media/FSHouseDoor.c4f5e47f6addb0dc6b52.webp",
+    "static/media/FSHouse.webp": "/www.gleefulclay.com/static/media/FSHouse.f45099f49f17465952fc.webp",
+    "static/media/BWTeapot.webp": "/www.gleefulclay.com/static/media/BWTeapot.7fd381c127cebec29a62.webp",
+    "static/media/FSWaveBowl.webp": "/www.gleefulclay.com/static/media/FSWaveBowl.c4af825c683c6eed2611.webp",
+    "static/media/CCSnail.webp": "/www.gleefulclay.com/static/media/CCSnail.373f3146094f1d81fa86.webp",
+    "static/media/BowlAndStars.webp": "/www.gleefulclay.com/static/media/BowlAndStars.f5450c673ac65280b87c.webp",
+    "index.html": "/www.gleefulclay.com/index.html",
+    "main.3596bf2a.css.map": "/www.gleefulclay.com/static/css/main.3596bf2a.css.map",
+    "main.42bfff7c.js.map": "/www.gleefulclay.com/static/js/main.42bfff7c.js.map",
+    "787.af272199.chunk.js.map": "/www.gleefulclay.com/static/js/787.af272199.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3596bf2a.css",
+    "static/js/main.42bfff7c.js"
+  ]
+}
