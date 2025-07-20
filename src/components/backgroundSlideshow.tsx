@@ -29,7 +29,7 @@ const BackgroundSlideshow: React.FC<BackgroundSlideshowProps> = ({
   const loopedImages = [...images, ...images] // Duplicate the array
 
   return (
-    <div className={`absolute inset-0 overflow-hidden z-0 ${className}`}>
+    <div className={`absolute inset-0 overflow-hidden  z-0 ${className}`}>
       <div
         ref={containerRef}
         className='flex h-full gap-10 w-fit'
