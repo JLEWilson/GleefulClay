@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/gleeful_clay/static/css/main.3596bf2a.css",
-    "main.js": "/gleeful_clay/static/js/main.7ad367c4.js",
-    "static/js/787.af272199.chunk.js": "/gleeful_clay/static/js/787.af272199.chunk.js",
-    "static/media/CCWallFish.webp": "/gleeful_clay/static/media/CCWallFish.768398d6139fc8f3e260.webp",
-    "static/media/CCWallSnail.webp": "/gleeful_clay/static/media/CCWallSnail.3feed635e6f2592a847f.webp",
-    "static/media/CCWall.webp": "/gleeful_clay/static/media/CCWall.445ff999cd611f400eab.webp",
-    "static/media/CCSharkTile.webp": "/gleeful_clay/static/media/CCSharkTile.5348cc572814dbc8cf4c.webp",
-    "static/media/BWCirclePot.webp": "/gleeful_clay/static/media/BWCirclePot.817c7c06deab24e4f9f0.webp",
-    "static/media/FSDragon.webp": "/gleeful_clay/static/media/FSDragon.d19884bffe37feeaee45.webp",
-    "static/media/BWCheckBowl.webp": "/gleeful_clay/static/media/BWCheckBowl.302f84c0ab0f9538e040.webp",
-    "static/media/CCOctopusBowlBottom.webp": "/gleeful_clay/static/media/CCOctopusBowlBottom.e6d55913bdabb869f3c3.webp",
-    "static/media/FSHouseDoor.webp": "/gleeful_clay/static/media/FSHouseDoor.c4f5e47f6addb0dc6b52.webp",
-    "static/media/FSHouse.webp": "/gleeful_clay/static/media/FSHouse.f45099f49f17465952fc.webp",
-    "static/media/BWTeapot.webp": "/gleeful_clay/static/media/BWTeapot.7fd381c127cebec29a62.webp",
-    "static/media/FSWaveBowl.webp": "/gleeful_clay/static/media/FSWaveBowl.c4af825c683c6eed2611.webp",
-    "static/media/CCSnail.webp": "/gleeful_clay/static/media/CCSnail.373f3146094f1d81fa86.webp",
-    "static/media/BowlAndStars.webp": "/gleeful_clay/static/media/BowlAndStars.f5450c673ac65280b87c.webp",
-    "index.html": "/gleeful_clay/index.html",
-    "main.3596bf2a.css.map": "/gleeful_clay/static/css/main.3596bf2a.css.map",
-    "main.7ad367c4.js.map": "/gleeful_clay/static/js/main.7ad367c4.js.map",
-    "787.af272199.chunk.js.map": "/gleeful_clay/static/js/787.af272199.chunk.js.map"
+    "main.css": "/GleefulClay/static/css/main.3596bf2a.css",
+    "main.js": "/GleefulClay/static/js/main.7bd6a091.js",
+    "static/js/787.af272199.chunk.js": "/GleefulClay/static/js/787.af272199.chunk.js",
+    "static/media/CCWallFish.webp": "/GleefulClay/static/media/CCWallFish.768398d6139fc8f3e260.webp",
+    "static/media/CCWallSnail.webp": "/GleefulClay/static/media/CCWallSnail.3feed635e6f2592a847f.webp",
+    "static/media/CCWall.webp": "/GleefulClay/static/media/CCWall.445ff999cd611f400eab.webp",
+    "static/media/CCSharkTile.webp": "/GleefulClay/static/media/CCSharkTile.5348cc572814dbc8cf4c.webp",
+    "static/media/BWCirclePot.webp": "/GleefulClay/static/media/BWCirclePot.817c7c06deab24e4f9f0.webp",
+    "static/media/FSDragon.webp": "/GleefulClay/static/media/FSDragon.d19884bffe37feeaee45.webp",
+    "static/media/BWCheckBowl.webp": "/GleefulClay/static/media/BWCheckBowl.302f84c0ab0f9538e040.webp",
+    "static/media/CCOctopusBowlBottom.webp": "/GleefulClay/static/media/CCOctopusBowlBottom.e6d55913bdabb869f3c3.webp",
+    "static/media/FSHouseDoor.webp": "/GleefulClay/static/media/FSHouseDoor.c4f5e47f6addb0dc6b52.webp",
+    "static/media/FSHouse.webp": "/GleefulClay/static/media/FSHouse.f45099f49f17465952fc.webp",
+    "static/media/BWTeapot.webp": "/GleefulClay/static/media/BWTeapot.7fd381c127cebec29a62.webp",
+    "static/media/FSWaveBowl.webp": "/GleefulClay/static/media/FSWaveBowl.c4af825c683c6eed2611.webp",
+    "static/media/CCSnail.webp": "/GleefulClay/static/media/CCSnail.373f3146094f1d81fa86.webp",
+    "static/media/BowlAndStars.webp": "/GleefulClay/static/media/BowlAndStars.f5450c673ac65280b87c.webp",
+    "index.html": "/GleefulClay/index.html",
+    "main.3596bf2a.css.map": "/GleefulClay/static/css/main.3596bf2a.css.map",
+    "main.7bd6a091.js.map": "/GleefulClay/static/js/main.7bd6a091.js.map",
+    "787.af272199.chunk.js.map": "/GleefulClay/static/js/787.af272199.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3596bf2a.css",
-    "static/js/main.7ad367c4.js"
+    "static/js/main.7bd6a091.js"
   ]
 }
