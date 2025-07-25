@@ -1,50 +1,44 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 
 interface BackgroundSlideshowProps {
   images: string[]
-  duration?: number
+  duration?: number // Time per image in ms
   className?: string
 }
 
 const BackgroundSlideshow: React.FC<BackgroundSlideshowProps> = ({
   images,
-  duration = 30000,
+  duration = 5000,
   className = '',
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
-    if (!containerRef.current || images.length === 0) return
+    if (images.length === 0) return undefined
 
-    containerRef.current.animate(
-      [{ transform: 'translateX(0)' }, { transform: 'translateX(-50%)' }],
-      {
-        duration,
-        iterations: Infinity,
-        easing: 'linear',
-      },
-    )
-  }, [images.length, duration])
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, duration)
 
-  const loopedImages = [...images, ...images] // Duplicate the array
+    return () => clearInterval(interval)
+  }, [images, duration])
 
   return (
-    <div className={`absolute inset-0 overflow-hidden  z-0 ${className}`}>
-      <div
-        ref={containerRef}
-        className='flex h-full gap-10 w-fit'
-        style={{
-          width: `${loopedImages.length * 100}vw`,
-        }}
-      >
-        {loopedImages.map((src) => (
+    <div className={`relative w-full h-full overflow-hidden ${className}`}>
+      {images.map((src, index) => (
+        <div
+          key={src}
+          className={`absolute inset-0 flex items-center 
+            justify-center transition-opacity duration-1000 ease-in-out ${
+              index === activeIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
+        >
           <div
-            key={src}
-            className='h-full w-screen bg-center bg-cover flex-shrink-0'
+            className='bg-cover md:bg-contain bg-no-repeat bg-center w-full h-full'
             style={{ backgroundImage: `url(${src})` }}
           />
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   )
 }

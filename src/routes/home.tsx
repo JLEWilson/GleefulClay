@@ -1,41 +1,38 @@
 import React from 'react'
 
 import BowlAndStars from '../images/BowlAndStars.webp'
-import Typography from '../Typography'
+import BackgroundSlideshow from '../components/backgroundSlideshow'
+import { SLIDESHOW_PHOTOS } from '../consts/photoGroups'
 
 const Home = () => {
   return (
-    <div
-      className='flex flex-col items-center justify-center
-    h-screen px-4 text-center'
-    >
-      <div
-        className='flex-shrink-0 max-h-[65vh] w-full 
-      flex justify-center items-center pt-16'
-      >
-        <img
-          src={BowlAndStars}
-          alt='Bowl and Stars'
-          className='object-contain max-h-full max-w-[80%]'
-        />
+    <div className='flex h-screen flex-col'>
+      <div className='flex flex-col p-6 '>
+        <div
+          className='flex flex-col md:flex-row items-center
+        md:items-start gap-4'
+        >
+          {/* Logo */}
+          <div className='h-[80px] w-auto'>
+            <img
+              src={BowlAndStars}
+              alt='Bowl and Stars'
+              className='object-contain h-full'
+            />
+          </div>
+
+          {/* Text */}
+          <div className='text-center'>
+            <p className='font-PlaypenSans text-blue-800 text-3xl'>Gleeful</p>
+            <p className='font-PlaypenSans text-blue-800 text-3xl'>Clay</p>
+          </div>
+        </div>
       </div>
 
-      <div
-        className='mt-4 flex flex-col items-center 
-      flex-shrink-0 max-h-[30vh] justify-center'
-      >
-        <Typography
-          variant='logo'
-          className='font-PlaypenSans text-text leading-tight text-3xl'
-        >
-          Gleeful
-        </Typography>
-        <Typography
-          variant='logo'
-          className='font-PlaypenSans text-text leading-tight text-3xl'
-        >
-          Clay
-        </Typography>
+      <div className='flex-1 flex justify-center md:px-4'>
+        <div className='w-full max-w-5xl'>
+          <BackgroundSlideshow images={SLIDESHOW_PHOTOS} />
+        </div>
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import Navigation from './components/navigation'
 import Home from './routes/home'
 import Gallery from './routes/gallery'
 import About from './routes/about'
+import Contact from './routes/contact'
 
 const App: React.FC = () => {
   const [route, setRoute] = React.useState('home')
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         {route === 'home' && <Home />}
         {route === 'gallery' && <Gallery />}
         {route === 'about' && <About />}
+        {route === 'contact' && <Contact />}
       </main>
     </div>
   )

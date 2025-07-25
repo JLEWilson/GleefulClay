@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Typography from '../Typography'
 
 const routes = [
   { name: 'Home', route: 'home' },
   { name: 'Gallery', route: 'gallery' },
   { name: 'About', route: 'about' },
+  { name: 'Contact', route: 'contact' },
 ]
 
 interface NavigationProps {
@@ -12,29 +13,82 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ setRoute }) => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
-    <nav
-      className='w-full h-16 z-50 bg-[#fbfbf9] md:bg-transparent
-    fixed md:top-0 bottom-0 flex justify-evenly items-center p-4'
-    >
-      {routes.map((r) => (
+    <nav className='w-full z-50 absolute top-0'>
+      {/* Hamburger Toggle Button */}
+      <div className='flex justify-end items-center p-8 md:hidden'>
         <button
-          key={`Button: ${r.name}`}
           type='button'
-          onClick={() => setRoute(r.route)}
-          className='hover:text-secondary transform transition duration-100 
-           ease-in-out hover:scale-110'
+          onClick={() => setMenuOpen(!menuOpen)}
+          className='relative w-8 h-6 flex flex-col justify-between
+           items-center cursor-pointer z-50'
+          aria-label='Toggle Menu'
         >
-          <Typography
-            key={`Text: ${r.name}`}
-            className='text-text font-PlayfairDisplay 
-              font-bold hover:text-secondary'
-            variant='h2'
-          >
-            {r.name}
-          </Typography>
+          <span
+            className={`block w-full h-1 bg-text transform transition duration-300 ease-in-out 
+              ${menuOpen ? 'rotate-45 translate-y-3' : ''}`}
+          />
+          <span
+            className={`block w-full h-1 bg-text transition-all duration-300 ease-in-out 
+              ${menuOpen ? 'opacity-0' : ''}`}
+          />
+          <span
+            className={`block w-full h-1 bg-text transform transition duration-300 ease-in-out 
+              ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
+          />
         </button>
-      ))}
+      </div>
+
+      {/* Mobile Menu Slide-in */}
+      <div
+        className={`fixed top-0 pt-16 right-0 max-w-sm
+          bg-[#fbfbf9] z-40 shadow-xl transition-transform
+          duration-300 ease-in-out rounded-bl-lg
+          ${menuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}
+      >
+        <div className='flex flex-col items-end p-4'>
+          {routes.map((r) => (
+            <button
+              type='button'
+              key={`MobileButton: ${r.name}`}
+              onClick={() => {
+                setRoute(r.route)
+                setMenuOpen(false)
+              }}
+              className='py-2 hover:text-secondary transition duration-100 ease-in-out'
+            >
+              <Typography
+                className='text-text font-PlayfairDisplay font-bold'
+                variant='h2'
+              >
+                {r.name}
+              </Typography>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop Menu */}
+      <div className='hidden md:flex gap-10 justify-end items-center p-4'>
+        {routes.map((r) => (
+          <button
+            key={`DesktopButton: ${r.name}`}
+            onClick={() => setRoute(r.route)}
+            type='button'
+            className='hover:text-secondary transform transition
+              duration-100 ease-in-out hover:scale-110'
+          >
+            <Typography
+              className='text-text font-PlayfairDisplay font-bold'
+              variant='h2'
+            >
+              {r.name}
+            </Typography>
+          </button>
+        ))}
+      </div>
     </nav>
   )
 }
