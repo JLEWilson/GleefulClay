@@ -5,7 +5,7 @@ const routes = [
   { name: 'Home', route: 'home' },
   { name: 'Gallery', route: 'gallery' },
   { name: 'About', route: 'about' },
-  { name: 'Contact', route: 'contact' },
+  // { name: 'Contact', route: 'contact' },
 ]
 
 interface NavigationProps {
@@ -16,9 +16,9 @@ const Navigation: React.FC<NavigationProps> = ({ setRoute }) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <nav className='w-full z-50 absolute top-0'>
+    <nav className='z-50 absolute top-0 right-0'>
       {/* Hamburger Toggle Button */}
-      <div className='flex justify-end items-center p-8 md:hidden'>
+      <div className='flex justify-end items-center p-8'>
         <button
           type='button'
           onClick={() => setMenuOpen(!menuOpen)}
@@ -41,12 +41,11 @@ const Navigation: React.FC<NavigationProps> = ({ setRoute }) => {
         </button>
       </div>
 
-      {/* Mobile Menu Slide-in */}
       <div
         className={`fixed top-0 pt-16 right-0 max-w-sm
           bg-[#fbfbf9] z-40 shadow-xl transition-transform
           duration-300 ease-in-out rounded-bl-lg
-          ${menuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}
+          ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className='flex flex-col items-end p-4'>
           {routes.map((r) => (
@@ -57,20 +56,32 @@ const Navigation: React.FC<NavigationProps> = ({ setRoute }) => {
                 setRoute(r.route)
                 setMenuOpen(false)
               }}
-              className='py-2 hover:text-secondary transition duration-100 ease-in-out'
+              className='py-2 transition duration-100 ease-in-out hover:scale-110'
             >
               <Typography
-                className='text-text font-PlayfairDisplay font-bold'
+                className='text-text font-PlayfairDisplay  hover:text-secondary font-bold'
                 variant='h2'
               >
                 {r.name}
               </Typography>
             </button>
           ))}
+          <a
+            href='mailto:limaweav2000@hotmail.com'
+            title='limaweav2000@hotmail.com'
+            className=' hover:scale-110 transition duration-150'
+          >
+            <Typography
+              className='text-text font-PlayfairDisplay  hover:text-secondary font-bold'
+              variant='h2'
+            >
+              Contact
+            </Typography>
+          </a>
         </div>
       </div>
 
-      {/* Desktop Menu */}
+      {/* Desktop Menu
       <div className='hidden md:flex gap-10 justify-end items-center p-4'>
         {routes.map((r) => (
           <button
@@ -88,7 +99,7 @@ const Navigation: React.FC<NavigationProps> = ({ setRoute }) => {
             </Typography>
           </button>
         ))}
-      </div>
+      </div> */}
     </nav>
   )
 }

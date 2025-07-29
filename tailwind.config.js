@@ -54,7 +54,7 @@ module.exports = {
       colors: {
         background: '#C4E8f8',
         primary: '#176B87',
-        secondary: '#64CCC5',
+        secondary: '#2C5282',
         text: '#dd5810',
       },
       skew: {

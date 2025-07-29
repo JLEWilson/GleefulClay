@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 
 interface ImageCarouselProps {
   images: string[]
@@ -14,15 +14,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   const [currentIndex, setCurrentIndex] = useState(0)
   const touchStartX = useRef(0)
   const touchEndX = useRef(0)
-
-  const [imageLoading, setImageLoading] = useState(true)
-
-  // Reset loading state when image index changes
-  useEffect(() => {
-    setImageLoading(true)
-  }, [currentIndex])
-
-  const handleImageLoad = () => setImageLoading(false)
 
   const prevImage = () =>
     setCurrentIndex((i) => (i === 0 ? images.length - 1 : i - 1))
@@ -67,30 +58,15 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           <button
             type='button'
             onClick={prevImage}
-            className='absolute left-0 px-2 py-1 
-            text-2xl hover:text-secondary'
+            className='absolute left-0 px-6 py-1 h-full
+            text-2xl hover:text-secondary hover: hover:sclale-110'
           >
             ‹
           </button>
-
-          {/* Loader Overlay */}
-          {imageLoading && (
-            <div
-              className='absolute inset-0 flex items-center 
-            justify-center bg-white bg-opacity-70 z-10'
-            >
-              <div
-                className='animate-spin rounded-full h-8 w-8 
-              border-t-2 border-b-2 border-gray-500'
-              />
-            </div>
-          )}
-
           <img
             src={images[currentIndex]}
             alt={`slide-${currentIndex}`}
             loading='lazy'
-            onLoad={handleImageLoad}
             className='mx-auto max-h-full object-contain rounded
              transition-opacity duration-300'
           />
@@ -98,7 +74,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           <button
             type='button'
             onClick={nextImage}
-            className='absolute right-0 px-2 py-1 text-2xl hover:text-secondary'
+            className='absolute right-0 px-6 py-1 text-2xl h-full hover:text-secondary
+            hover:sclale-110'
           >
             ›
           </button>

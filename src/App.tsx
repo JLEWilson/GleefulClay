@@ -3,14 +3,13 @@ import Navigation from './components/navigation'
 import Home from './routes/home'
 import Gallery from './routes/gallery'
 import About from './routes/about'
-import Contact from './routes/contact'
 
 const App: React.FC = () => {
   const [route, setRoute] = React.useState('home')
 
   return (
     <div
-      className='flex flex-col min-h-screen overflow-hidden
+      className='flex flex-col w-screen min-h-screen overflow-hidden
     bg-gradient-to-b from-background to-[#fbfbf9]'
     >
       <Navigation setRoute={setRoute} />
@@ -18,7 +17,6 @@ const App: React.FC = () => {
         {route === 'home' && <Home />}
         {route === 'gallery' && <Gallery />}
         {route === 'about' && <About />}
-        {route === 'contact' && <Contact />}
       </main>
     </div>
   )
