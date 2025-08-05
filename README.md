@@ -75,4 +75,4 @@ Step2: Install Dependencies.
 
 _If you run into any problems or find a bug, would like to reach me for a separate reason, feel free to send me an email @jacobleeeugenewilson@gmail.com with details of your issue._
 
-Copyright (c) _03/10/2022_ _Jacob Wilson_
+Copyright (c) _08/05/2025_ _Jacob Wilson_
