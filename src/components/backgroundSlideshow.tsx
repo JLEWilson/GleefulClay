@@ -8,7 +8,7 @@ interface BackgroundSlideshowProps {
 
 const BackgroundSlideshow: React.FC<BackgroundSlideshowProps> = ({
   images,
-  duration = 5000,
+  duration = 2500,
   className = '',
 }) => {
   const [activeIndex, setActiveIndex] = useState(0)
